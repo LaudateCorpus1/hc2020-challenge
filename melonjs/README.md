@@ -54,10 +54,8 @@
 
 
 
-"CCleaner Space Invaders" melonJS boilerplate sample project
+melonJS boilerplate sample project
 -------------------------------------------------------------------------------
-
-![alt_text](README.png)
 
 ## To run distribution
 
@@ -77,7 +75,19 @@ Running the game:
 
 	grunt serve
 
-And you will have the boilerplate example running on http://localhost:8000
+And you should have the boilerplate example running on http://localhost:8000
+
+## To run a web server
+
+To run the game in the browser you will need to run local web server. This can be achieved by installing Python and starting Simple HTTP Server.
+
+On Windows you can run the command:
+
+	python -m SimpleHTTPServer 8080
+
+On Mac/Linux you can run the command:
+
+	python -m http.server 8080
 
 ## Building Release Versions
 
