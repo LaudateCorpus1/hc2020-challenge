@@ -2,13 +2,13 @@
 /* Game namespace */
 var game = {
 
+    // an object where to store game information
     data : {
-        score : 0,
-        enemyCount : 0,
-        playerLives : 0,
-        gridSize : 64  	
+        // score
+        score : 0
     },
-    
+
+
     // Run on page load.
     "onload" : function () {
         // Initialize the video.
@@ -16,6 +16,12 @@ var game = {
             alert("Your browser does not support HTML5 canvas.");
             return;
         }
+
+        me.pool.register("player", game.Player);
+
+        me.pool.register("enemy", game.Enemy);
+
+        me.pool.register("laser", game.Laser);
 
         // Initialize the audio.
         me.audio.init("mp3,ogg");
@@ -30,17 +36,6 @@ var game = {
          // set the "Play/Ingame" Screen Object
         this.playScreen = new game.PlayScreen();
         me.state.set(me.state.PLAY, this.playScreen);
-
-        this.gameOverScreen = new game.GameEndScreen();
-        me.state.set(me.state.GAMEOVER, this.gameOverScreen);
-
-        //add entities to entity pool
-        me.pool.register("player", game.Player);
-        me.pool.register("Chrome", game.Chrome);
-        me.pool.register("Firefox", game.Firefox);
-        me.pool.register("Edge", game.Edge);
-        me.pool.register("laser", game.Laser);
-
         // Start the game.
         me.state.change(me.state.PLAY);
     }

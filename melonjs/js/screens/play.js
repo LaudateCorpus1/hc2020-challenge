@@ -4,10 +4,7 @@ game.PlayScreen = me.ScreenObject.extend({
      */
     checkIfLoss : function (y) {
         if (y >= this.player.pos.y) {
-            //Display game over screen intead of reseting the game
-           //this.reset();
-           console.log("Play Screen Reset GAMEOVER");
-           me.state.change(me.state.GAMEOVER);
+           this.reset();
         }
     },
 
@@ -20,12 +17,6 @@ game.PlayScreen = me.ScreenObject.extend({
         this.enemyManager = new game.EnemyManager();
         this.enemyManager.createEnemies();
         me.game.world.addChild(this.enemyManager, 2);
-
-        //game.data.waveCount += 1;
-        //console.log("Play Screen Reset ... wave ");
-        
-
-        game.enemyExplosionEmitter = new game.explosionManager(0, 0, "explosion");
     
         me.input.bindKey(me.input.KEY.LEFT, "left");
         me.input.bindKey(me.input.KEY.RIGHT, "right");

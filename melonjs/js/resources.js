@@ -50,11 +50,6 @@ game.resources = [
         "src": "data/img/ships.png"
     },
     {
-        "name": "explosion",
-        "type": "image",
-        "src": "data/img/explosion.png"
-    },
-    {
         "name": "gripe_run_right",
         "type": "image",
         "src": "data/img/sprite/gripe_run_right.png"
