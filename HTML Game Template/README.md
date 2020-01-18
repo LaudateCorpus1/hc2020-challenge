@@ -1,0 +1,28 @@
+### Overview of Files
+
+- **components** - use components to add behavior to entities
+	- *boundarycheck.js* - used for detecting when entities cross screen boundaries
+	- *component.js* - component base class
+	- *quad.js* - renders a coloured rectangle to the canvas
+	- *sprite.js* - renders a bitmap to the canvas
+	- *velocity.js* - adjusts an entity's position over time
+- **entities** - represent objects on the screen
+	- *entity.js* - entity base class
+	- *pickup.js* - collectible object represented by a yellow star
+	- *player.js* - user controlled object represneted by a blue circle
+	- *scoreboard.js* - displays current and high scores
+	- *spawner.js* - controls creation of entities over time
+	- *text.js* - displays text on the canvas
+	- *wanderer.js* - basic enemy red squares that reduce your score on contact
+- **graphics** - bitmaps used in the game
+	- *pickup.png* - yellow star
+	- *player.png* - blue circle
+	- *wanderer.png* - red square (note: not the beer!)
+- **scenes** - controllable group of entities
+	- *background.js* - drawn behind all the other scenes
+	- *game_level.js* - contains all the moving parts
+	- *menu.js* - manages scoreboard and pause functionality
+	- *scene.js* - base scene class
+- *index.html* - entrypoint for the browser; renders the game canvas
+- *main.js* - entrypoint for the game code
+- *styles.css* - ancillary styles for the canvas
